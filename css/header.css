@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+.header{
+    padding: 60px 32px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu-lista{
+    display: flex;
+    gap: 20px; 
+}
+
+.menu-lista a{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px 8px;
+}
+
+.menu-lista a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--cp);
+    transition: .2s;
+}
+
+.menu-lista a:hover::after{
+    width: 100%;
+}
+
+#check{
+    display: none;
+}
+
+.check-btn{
+    position: absolute;
+    right: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.check-btn img{
+    width: 32px;
+}
+
+@media(max-width: 800px){
+    .menu img{
+        width: auto;
+        height: 30px;
+    }
+    .menu-lista a{
+        font-size: 1.125rem;
+    }
+}
+
+@media(max-width: 600px){
+    .header{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .check-btn{
+        display: block;
+    }
+
+    .menu-lista{
+        flex-direction: column;
+        position: fixed;
+        top: 75px;
+        right: -200px;
+        background-color: var(--cp);
+        text-align: center;
+        padding: 8px 16px;
+        transition: .5s;
+        border-radius: 2px;
+    }
+
+    .menu-lista a{
+        font-size: 1rem;
+        color: var(--branco);
+    }
+
+    #check:checked ~ .menu-lista{
+        right: 10px;
+    }/* Para esse estilo ser aceito, os elementos html devem estar no mesmo nível de indentação */
+}
