@@ -52,12 +52,14 @@
 }
 
 @media(max-width: 800px){
+    .header{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
     .menu img{
         width: auto;
         height: 30px;
-    }
-    .menu-lista a{
-        font-size: 1.125rem;
     }
 }
 
@@ -81,14 +83,29 @@
         padding: 8px 16px;
         transition: .5s;
         border-radius: 2px;
+        gap: 4px;
     }
 
     .menu-lista a{
-        font-size: 1rem;
         color: var(--branco);
+        display: block;
+    }
+
+    .menu-lista a::after{
+        display: none;
     }
 
     #check:checked ~ .menu-lista{
         right: 10px;
     }/* Para esse estilo ser aceito, os elementos html devem estar no mesmo nível de indentação */
+}
+
+@media(max-width: 450px){
+    .menu-lista{
+        padding: 4px 8px;
+    }
+
+    .menu-lista a{
+        font-size: .875rem;
+    }
 }
