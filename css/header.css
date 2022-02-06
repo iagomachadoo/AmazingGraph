@@ -82,7 +82,7 @@
         text-align: center;
         padding: 8px 16px;
         transition: .5s;
-        border-radius: 2px;
+        border-radius: 10px;
         gap: 4px;
     }
 
@@ -103,9 +103,5 @@
 @media(max-width: 450px){
     .menu-lista{
         padding: 4px 8px;
-    }
-
-    .menu-lista a{
-        font-size: .875rem;
     }
 }

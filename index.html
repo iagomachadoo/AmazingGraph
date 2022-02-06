@@ -15,10 +15,10 @@
 <body>
     <header class="header">
         <nav class="menu">
-            <img src="./assets/devchalleng-otimi.svg" alt="Logo DevChalleng" width="274" height="48" class="logo">
+            <img src="./assets/img-otimi/devchalleng.svg" alt="Logo DevChalleng" width="274" height="48" class="logo">
 
             <input type="checkbox" id="check">
-            <label for="check" class="check-btn"><img src="./assets/menu-hamb-otimi.svg" alt="Menu hamburguer" width="16" height="16"></label>
+            <label for="check" class="check-btn"><img src="./assets/img-otimi/menu-hamb.svg" alt="Menu hamburguer" width="16" height="16"></label>
             
             <ul class="font-padrao-500 cs menu-lista">
                 <li><a href="./">Home</a></li>
@@ -39,9 +39,15 @@
             <a href="./" class="font-padrao-500 branco btn">Start now</a>
         </div>
 
-        <div class="img">
-            <img src="./assets/team-otimi.jpg" alt="" width="8000" height="4848" class="ilustacao">
-        </div>
+        <picture class="img">
+            <source media="(max-width: 750px)" srcset="./assets/img-otimi/team-650-394.webp" type="image/webp">
+
+            <source media="(max-width: 850px)" srcset="./assets/img-otimi/team-800-485.webp" type="image/webp">
+
+            <source media="(max-width: 1050px)" srcset="./assets/img-otimi/team-1000-606.webp" type="image/webp">
+
+            <img src="./assets/img-otimi/team-2000-1212.webp" alt="" width="2000" height="1212" class="ilustacao">
+        </picture>
     </main>
 </body>
 </html>
